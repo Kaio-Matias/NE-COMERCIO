@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main>
       {/* 1. SEÇÃO HERO (CAMINHÃO) */}
-      <section className="relative h-[70vh] min-h-[500px] w-full flex items-center justify-center text-white">
+      <section className="relative h-[70vh] min-h-[500px] w-full flex items-center justify-start text-white">
         
         {/* Imagem de Fundo */}
         <Image
@@ -13,16 +13,16 @@ export default function Home() {
           alt="Imagem meramente ilustrativa"
           layout="fill"
           objectFit="cover"
-          className="-z-10 brightness-[0.4]" // Escurece a imagem para o texto aparecer
+          className="-z-10" // O brilho foi removido
         />
 
         {/* Conteúdo de Texto por cima */}
-        <div className="text-center p-4 max-w-4xl">
-          <h1 className="text-5xl md:text-7xl font-bold drop-shadow-lg">
+        <div className="text-left p-8 max-w-4xl">
+          <h1 className="text-6xl md:text-8xl font-bold drop-shadow-lg">
             {/* Usamos um <span> para colorir só a primeira palavra */}
             <span className="text-orange-500">Nordeste</span> Atacadista!
           </h1>
-          <p className="mt-4 text-xl md:text-2xl font-light">
+          <p className="mt-4 text-2xl md:text-3xl font-light">
             Distribuindo qualidade, fortalecendo parcerias.
           </p>
         </div>
@@ -57,12 +57,15 @@ export default function Home() {
           {/* Coluna da Direita (Imagem) */}
           <div>
             <Image
-              src="/quem-somos.png" // Caminho a partir da pasta 'public'
+              src="/quem-somos.jpg" // Caminho a partir da pasta 'public'
               alt="Aperto de mão de parceiros"
-              width={400}
-              height={200}
+              width={800} // Largura reduzida
+              height={100} // Altura reduzida
               className="rounded-lg shadow-xl object-cover w-full h-auto"
             />
+          </div>
+          <div>
+            
           </div>
         </div>
       </section>

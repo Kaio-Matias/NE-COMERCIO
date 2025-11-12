@@ -1,5 +1,6 @@
 // app/page.tsx
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -11,9 +12,8 @@ export default function Home() {
         <Image
           src="/h1_hero1.png" // Caminho a partir da pasta 'public'
           alt="Imagem meramente ilustrativa"
-          layout="fill"
-          objectFit="cover"
-          className="-z-10" // O brilho foi removido
+          fill
+          className="-z-10 object-cover" // O brilho foi removido
         />
 
         {/* Conteúdo de Texto por cima */}
@@ -66,6 +66,56 @@ export default function Home() {
           </div>
           <div>
             
+          </div>
+        </div>
+      </section>
+
+      {/* 3. SEÇÃO "NOSSAS MARCAS PARCEIRAS" */}
+      <section className="bg-white py-20 px-4">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-bold text-blue-900 mb-12">
+            Nossas Marcas <span style={{ color: 'rgba(253, 126, 20, 1)' }}>Parceiras</span>
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+            <Link href="/marcas/valedourado">
+              <div className="flex justify-center">
+                <div className="w-64 h-64 rounded-full overflow-hidden shadow-lg flex items-center justify-center border-4 border-gray-200">
+                  <Image
+                    src="/Logo-Valedourado.png"
+                    alt="Logo Valedourado"
+                    width={350}
+                    height={250}
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+            </Link>
+            <Link href="/marcas/nutribas">
+              <div className="flex justify-center">
+                <div className="w-64 h-64 rounded-full overflow-hidden shadow-lg flex items-center justify-center border-4 border-gray-200">
+                  <Image
+                    src="/Logo-Nutribas.png"
+                    alt="Logo Nutribas"
+                    width={350}
+                    height={150}
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+            </Link>
+            <Link href="/marcas/agrofoods">
+              <div className="flex justify-center">
+                <div className="w-64 h-64 rounded-full overflow-hidden shadow-lg flex items-center justify-center border-4 border-gray-200">
+                  <Image
+                    src="/Logo-Agrofoods.png"
+                    alt="Logo Agrofoods"
+                    width={350}
+                    height={150}
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
